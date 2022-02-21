@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,6 @@ export class AppComponent {
       name: 'EL mejor juguete',
       price: 565,
       image: './assets/images/toy.jpg',
-      category: 'all',
     },
     {
       name: 'Bicicleta casi nueva',
@@ -48,4 +48,6 @@ export class AppComponent {
   helloWorld() {
     console.log("Hola mundito!")
   }
+
+
 }
