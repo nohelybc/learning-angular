@@ -12,6 +12,12 @@ export class AppComponent {
   advance = 26;
   btnDisabled = true;
 
+  box = {
+    width: 100,
+    height: 100,
+    background: 'purple'
+  }
+
   products: Product[] = [
     {
       name: 'EL mejor juguete',
