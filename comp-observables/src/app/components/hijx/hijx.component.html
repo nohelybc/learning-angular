@@ -1,1 +1,13 @@
-<p>hijx works!</p>
+<h3>Hijx component</h3>
+<hr>
+
+<!-- <h5> {{ mensaje }} </h5> -->
+
+<h5 *ngIf="dataService.nombreEvent | async as nombre; else sinData"> 
+    <!-- {{ dataService.nombreEvent | async }}  -->
+    {{ nombre }}
+</h5>
+
+<ng-template #sinData>
+    No hay información
+</ng-template>
