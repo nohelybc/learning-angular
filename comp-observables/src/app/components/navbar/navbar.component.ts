@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  mensaje: string = 'Navbar!';
+
+  constructor( private dataService: DataService ) { }
 
   ngOnInit() {
+    this.dataService.nombreEvent.subscribe( texto => {
+      this.mensaje = texto;
+      console.log('navbar:', texto)
+    })
   }
 
 }
