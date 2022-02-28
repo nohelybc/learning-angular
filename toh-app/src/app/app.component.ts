@@ -12,6 +12,12 @@ export class AppComponent {
   advance = 26;
   btnDisabled = true;
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   box = {
     width: 100,
     height: 100,
@@ -55,5 +61,8 @@ export class AppComponent {
     console.log("Hola mundito!")
   }
 
+  onRegister() {
+    console.log(this.register);
+  }
 
 }
