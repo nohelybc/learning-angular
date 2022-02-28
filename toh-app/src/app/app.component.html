@@ -3,6 +3,22 @@
 <input type="text" [value]="name" />
 <progress max="100" [value]="advance"></progress>
 
+<h2>Formulario</h2>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <div class="input-group">
+        <label for="name">Nombre:</label>
+        <input type="text" required name="name" id="name" [(ngModel)]="register.name">
+        <p>Oh no! Este es un mensaje de error</p>
+        <label for="email">Email:</label>
+        <input type="email" required name="email" id="email" [(ngModel)]="register.email">
+        <p>Oh no! Este es un mensaje de error</p>
+        <label for="password">Contraseña:</label>
+        <input type="password" required name="password" id="password" [(ngModel)]="register.password">
+        <p>Oh no! Este es un mensaje de error</p>
+    </div>
+    <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+</form>
+
 <h2>Ejemplo de Ng Model</h2>
 <p>{{ name }}</p>
 <input type="text" [(ngModel)]="name" />
@@ -24,8 +40,6 @@
     ></div>
   </div>
 </div>
-
-<div class="box"></div>
 
 <h2>Ejemplo de *ngFor Objs</h2>
 <div class="products-grid">
