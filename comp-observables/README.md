@@ -1,27 +1,21 @@
-# CompObservables
+# Proyecto semi-configurado
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+Este proyecto de Angular está semi configurado para poder realizar demostraciones y ejemplo rápidos, sin tener que hacer nuevamente todo este código.
 
-## Development server
+## Notas:
+Estan configuradas las rutas
+* Solo hay una ruta configurada
+* Existe una carpeta de componentes con su módulo
+* Existe una carpeta de pages con su módulo
+* Ambos módulos están importados en el app.module.ts
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Inicializar el proyecto
+Recuerden que deben de tener el AngularCLI instalado y luego ejecutar:
 
-## Code scaffolding
+```
+npm install
+ng serve -o
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Curso de Angular de cero a experto a 10 USD
+[Curso de Angular Fernando Herrera](https://www.udemy.com/angular-2-fernando-herrera/?couponCode=ANGULAR-10)
