@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
-interface ContactForm {
-  "name": string;
-  "checkAdult": boolean;
-  "department": string;
-  "comment": string;
-}
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-reactive',
@@ -15,20 +8,35 @@ interface ContactForm {
 })
 export class ContactReactiveComponent implements OnInit {
 
-  model = {
-    name: '',
-    checkAdult: false,
-    department: '',
-    comment: ''
-  }
-  constructor() { }
+  contactForm!: FormGroup;
+
+  constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.contactForm = this.initForm();
+    // this.onPathValue();
+    // this.onSetValue();
   }
-  onSubmit(form: NgForm): void {
 
-    console.log('Form values', form);
+  onPathValue(): void {
+    this.contactForm.patchValue({ name: 'Bezael' });
+  }
 
+  onSetValue(): void {
+    // this.contactForm.setValue({ comment: 'Hola mundo' });
+  }
+
+  onSubmit(): void {
+    console.log('Form ->', this.contactForm.value);
+  }
+
+  initForm(): FormGroup {
+    return this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      checkAdult: ['', [Validators.required]],
+      department: [''],
+      comment: ['', [Validators.required]],
+    })
   }
 
 }
