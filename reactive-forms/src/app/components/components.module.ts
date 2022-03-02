@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ContactReactiveComponent
   ],
+  exports: [
+    ContactReactiveComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
