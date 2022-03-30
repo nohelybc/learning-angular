@@ -7,17 +7,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ImgComponent } from './components/img/img.component';
 import { PracticeComponent } from './components/practice/practice.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImgComponent,
-    PracticeComponent
+    PracticeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
