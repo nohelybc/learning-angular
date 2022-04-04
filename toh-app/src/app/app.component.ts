@@ -7,5 +7,10 @@ import { Product } from './components/practice/product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  imgParent = '';
+
+  onLoaded(img: string) {
+    console.log('log padre', img);
+  }
 
 }
